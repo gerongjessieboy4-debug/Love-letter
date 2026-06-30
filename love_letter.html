@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For You ❤️</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;display:flex;justify-content:center;align-items:center;min-height:100vh;background:linear-gradient(135deg,#0f172a,#6d28d9);color:#fff}
+.card{max-width:760px;width:90%;background:rgba(255,255,255,.08);padding:40px;border-radius:18px;backdrop-filter:blur(10px)}
+button{padding:12px 24px;border:none;border-radius:999px;background:#ec4899;color:#fff;cursor:pointer}
+#letter,#promise{display:none;white-space:pre-wrap;line-height:1.8;margin-top:20px}
+</style></head>
+<body><div class="card">
+<h1>To Someone Very Special</h1>
+<p>Every word below comes from my heart.</p>
+<button onclick="openLetter()">Open Letter</button>
+<div id="letter"><div id="msg"></div><br><button onclick="document.getElementById('promise').style.display='block'">Read My Promise</button>
+<div id="promise">
+I still believe in us.
+
+If you're willing to come back, I promise we'll face everything together.
+
+Don't overthink everything. Ako ray bahala nimo.
+
+We'll take it one day at a time. I don't expect perfection—I only hope we never stop choosing each other.
+
+No matter what happens, my heart will always find its way back to you. ❤️
+</div></div>
+</div>
+<script>
+const text=`Hi Love,
+
+I've been thinking about us a lot lately.
+
+No relationship is perfect, but despite everything, I still believe in what we have.
+
+I still choose you.
+
+If there's still a chance, I hope you'll come back to me.
+
+Don't carry every burden by yourself. Ako ray bahala nimo. We'll face everything together, one step at a time.
+
+I miss us.
+
+Always. ❤️`;
+let i=0;
+function openLetter(){
+document.getElementById('letter').style.display='block';
+document.getElementById('msg').textContent='';
+i=0;type();}
+function type(){if(i<text.length){document.getElementById('msg').textContent+=text.charAt(i++);setTimeout(type,28);}}
+</script></body></html>
